@@ -3,7 +3,7 @@
 
 .SUFFIXES : .tex .dvi .ps .pdf
 
-.PHONEY : default dvi ps pdf clean clobber
+.PHONEY : default dvi ps pdf clean clobber push pull
 
 REPORTS = all
 
@@ -36,4 +36,10 @@ clean:
 
 clobber: clean
 	rm -rf $(REPORTS:%=%.ps) $(REPORTS:%=%.pdf)
+
+push:
+	rsync -av --rsh=ssh Ref acdl:/home/mikepark
+
+pull:
+	rsync -av --rsh=ssh acdl:/home/mikepark/Ref .
 
