@@ -1,0 +1,135 @@
+% Templates for some more common BiBTeX entry types.
+% Richard Dwight 
+% http://www.maths.manchester.ac.uk/~rdwight/misc/entry_templates.bib
+
+% An article from a journal or magazine.
+@Article{,
+%required
+  author       = {}, 
+  title        = {}, 
+  journal      = {}, 
+  year         = {},
+%optional
+  volume       = {}, 
+  number       = {}, 
+  pages        = {}, 
+  month        = {}, 
+  note         = {}, 
+  key          = {}
+}
+
+% A part of a book with its own title.
+@InCollection{,
+%required
+  author       = {}, 
+  title        = {}, 
+  booktitle    = {}, 
+  year         = {},
+%optional
+  editor       = {}, 
+  pages        = {}, 
+  organization = {}, 
+  publisher    = {}, 
+  address      = {}, 
+  month        = {}, 
+  note         = {}, 
+  key          = {} 
+} 
+
+% An article in the proceedings of a conference.
+@InProceedings{,
+%required
+  author       = {}, 
+  title        = {}, 
+  booktitle    = {}, 
+  year         = {},
+%optional
+  editor       = {}, 
+  pages        = {}, 
+  organization = {}, 
+  publisher    = {}, 
+  address      = {}, 
+  month        = {}, 
+  note         = {}, 
+  key          = {} 
+}
+
+% A PhD thesis
+@PhdThesis{,
+%required
+  author       = {}, 
+  title        = {}, 
+  school       = {}, 
+  year         = {},
+%optional
+  address      = {}, 
+  month        = {}, 
+  note         = {}, 
+  key          = {} 
+}
+
+% A Masters thesis
+@MastersThesis{,
+%required
+  author       = {}, 
+  title        = {}, 
+  school       = {}, 
+  year         = {},
+%optional
+  address      = {}, 
+  month        = {}, 
+  note         = {}, 
+  key          = {} 
+}
+
+% A report published by a school or other institution, 
+% usually numbered within a series.
+@TechReport{,
+%required
+  author       = {}, 
+  title        = {}, 
+  institution  = {}, 
+  year         = {},
+%optional
+  type         = {}, 
+  number       = {}, 
+  address      = {}, 
+  month        = {}, 
+  note         = {}, 
+  key          = {}
+}
+
+% A book with an explicit publisher.
+@Book{,
+%either
+  author       = {},
+%or 
+  editor       = {}, 
+%required
+  title        = {}, 
+  publisher    = {}, 
+  year         = {},
+%optional
+  volume       = {}, 
+  series       = {}, 
+  address      = {},
+  edition      = {}, 
+  month        = {}, 
+  note         = {}, 
+  key          = {}
+}
+     
+% Technical documentation.
+@Manual{,
+%required
+  title        = {}
+%optional
+  author       = {}, 
+  organization = {}, 
+  address      = {}, 
+  edition      = {}, 
+  month        = {}, 
+  year         = {}, 
+  note         = {}, 
+  key          = {} 
+}
