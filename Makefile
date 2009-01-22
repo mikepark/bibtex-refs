@@ -38,8 +38,10 @@ clobber: clean
 	rm -rf $(REPORTS:%=%.ps) $(REPORTS:%=%.pdf)
 
 push:
+	git push
 	rsync -av --rsh=ssh Ref acdl:/home/mikepark
 
 pull:
+	git pull
 	rsync -av --rsh=ssh acdl:/home/mikepark/Ref .
 
