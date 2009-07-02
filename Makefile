@@ -1,17 +1,23 @@
 
 .SUFFIXES :
 
-.SUFFIXES : .tex .dvi .ps .pdf
+.SUFFIXES : .tex .dvi .ps .pdf .bib
 
 .PHONEY : default dvi ps pdf clean clobber push pull
 
 REPORTS = all
 
-default: ps pdf
+default: bib pdf
 
 ps: $(REPORTS:%=%.ps)
 
 pdf: $(REPORTS:%=%.pdf)
+
+bib: $(REPORTS:%=%.bib)
+
+.tex.bib:
+	latex $*
+	bibtex $*
 
 .tex.dvi:
 	latex $*
