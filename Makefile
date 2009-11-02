@@ -5,7 +5,7 @@
 
 .PHONEY : default dvi ps pdf clean clobber push pull
 
-REPORTS = all
+REPORTS = all mike_park_publications
 
 default: bib pdf
 
