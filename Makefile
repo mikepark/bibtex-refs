@@ -29,8 +29,12 @@ bib: $(REPORTS:%=%.bib)
 .dvi.ps:
 	dvips -o $*.ps $*.dvi
 
-.dvi.pdf:
-	dvipdf $*.dvi $*.pdf
+.tex.pdf:
+	pdflatex $*
+	grep 'There were undefined references' $*.log > /dev/null && \
+	   bibtex $* && latex $* || true
+	grep Rerun $*.log > /dev/null && pdflatex $* || true
+	grep Rerun $*.log > /dev/null && pdflatex $* || true
 
 gv: ps
 	( gv -w $(SHOW).ps || gv --watch $(SHOW).ps ) &
