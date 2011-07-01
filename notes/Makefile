@@ -5,7 +5,7 @@
 
 .PHONEY : default dvi ps pdf clean clobber push pull
 
-REPORTS = load-balance
+REPORTS = parallel-adapt-load-balance
 
 default: bib pdf
 
