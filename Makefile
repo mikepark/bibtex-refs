@@ -55,3 +55,6 @@ pull:
 	git pull
 	rsync -av --rsh=ssh acdl:/home/mikepark/Ref .
 
+pull-subjects:
+	rsync -av --rsh=ssh cmb20:bibtex-refs/subjects .
+
