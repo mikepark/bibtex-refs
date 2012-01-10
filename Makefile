@@ -55,9 +55,11 @@ pull:
 	git pull
 	rsync -av --rsh=ssh acdl:/home/mikepark/Ref .
 
+SUBJECTHOST=cfdlab
+
 pull-subjects:
-	rsync -av --rsh=ssh cfdlab:bibtex-refs/subjects .
+	rsync -av --rsh=ssh $(SUBJECTHOST):bibtex-refs/subjects .
 
 push-subjects:
-	rsync -av --rsh=ssh subjects cfdlab:bibtex-refs
+	rsync -av --rsh=ssh subjects $(SUBJECTHOST):bibtex-refs
 
