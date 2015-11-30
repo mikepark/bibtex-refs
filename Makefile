@@ -49,6 +49,7 @@ clobber: clean
 
 push:
 	git push
+	rm -f Ref/.DS_Store
 	rsync -av --rsh=ssh Ref acdl:/home/mikepark
 
 pull:
