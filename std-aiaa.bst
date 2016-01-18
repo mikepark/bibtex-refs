@@ -43,6 +43,7 @@ ENTRY
     author
     booktitle
     chapter
+    doi
     edition
     editor
     howpublished
@@ -729,6 +730,14 @@ FUNCTION {format.pages}
   if$
 }
 
+FUNCTION {output.doi}
+{
+    doi empty$
+        { skip$ }
+        { ". \doi{" * doi * "}" * }
+    if$
+}
+
 FUNCTION {format.journal.pages}
 {
   pages empty$
@@ -945,6 +954,7 @@ FUNCTION {article}
     }
   if$
   format.journal.pages
+  output.doi
   note output
   fin.entry
 }
@@ -973,6 +983,7 @@ FUNCTION {book}
   if$
   format.edition output
   format.date "year" output.check
+  output.doi
   note output
   fin.entry
 }
@@ -985,6 +996,7 @@ FUNCTION {booklet}
   howpublished output
   address output
   format.date output
+  output.doi
   note output
   fin.entry
 }
@@ -1017,6 +1029,7 @@ FUNCTION {inbook}
   format.edition output
   format.date "year" output.check
   format.pages "pages" output.check
+  output.doi
   note output
   fin.entry
 }
@@ -1040,6 +1053,7 @@ FUNCTION {incollection}
     }
   if$
   format.pages "pages" output.check
+  output.doi
   note output
   fin.entry
 }
@@ -1068,6 +1082,7 @@ FUNCTION {inproceedings}
     }
   if$
   format.pages "pages" output.check
+  output.doi
   note output
   fin.entry
 }
@@ -1102,6 +1117,7 @@ FUNCTION {manual}
   if$
   format.edition output
   format.date output
+  output.doi
   note output
   fin.entry
 }
@@ -1114,6 +1130,7 @@ FUNCTION {mastersthesis}
   school "school" output.check
   address output
   format.date "year" output.check
+  output.doi
   note output
   fin.entry
 }
@@ -1125,6 +1142,7 @@ FUNCTION {misc}
   end.quote.title
   howpublished output
   format.date output
+  output.doi
   note output
   fin.entry
   empty.misc.check
@@ -1138,6 +1156,7 @@ FUNCTION {phdthesis}
   school "school" output.check
   address output
   format.date "year" output.check
+  output.doi
   note output
   fin.entry
 }
@@ -1170,6 +1189,7 @@ FUNCTION {proceedings}
       publisher output
     }
   if$
+  output.doi
   note output
   fin.entry
 }
@@ -1183,6 +1203,7 @@ FUNCTION {techreport}
   institution "institution" output.check
   address output
   format.date "year" output.check
+  output.doi
   note output
   fin.entry
 }
@@ -1192,6 +1213,7 @@ FUNCTION {unpublished}
   format.authors "author" output.check
   format.title "title" output.check
   end.quote.title
+  output.doi
   note "note" output.check
   fin.entry
 }

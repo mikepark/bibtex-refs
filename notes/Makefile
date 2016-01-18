@@ -33,6 +33,7 @@ bib: $(REPORTS:%=%.bib)
 clean:
 	rm -rf $(REPORTS:%=%.aux) $(REPORTS:%=%.bbl) $(REPORTS:%=%.blg)
 	rm -rf $(REPORTS:%=%.log) $(REPORTS:%=%.toc) $(REPORTS:%=%.dvi)
+	rm -rf $(REPORTS:%=%.out)
 	rm -rf *~ 
 
 clobber: clean
