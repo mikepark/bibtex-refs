@@ -51,11 +51,11 @@ clobber: clean
 push:
 	git push
 	rm -f Ref/.DS_Store
-	rsync -av --rsh=ssh Ref acdl:/home/mikepark
+	rsync -av --rsh=ssh Ref cmb20:/ump/fldmd/home/mpark/bibtex-refs
 
 pull:
 	git pull
-	rsync -av --rsh=ssh acdl:/home/mikepark/Ref .
+	rsync -av --rsh=ssh cmb20:/ump/fldmd/home/mpark/bibtex-refs/Ref .
 
 SUBJECTHOST=cmb20
 
