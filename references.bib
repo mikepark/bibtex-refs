@@ -2315,7 +2315,7 @@ Ref/barral-imr-2016-aniso-adapt-petsc-firedrake.pdf
                   Matthew D. Piggott and Gerard J. Gorman},
   title =        {Anisotropic mesh adaptation in Firedrake with PETSc DMPlex},
   year =         2016,
-  series =       {25th International Meshing Roundtable Research Notes},
+  booktitle =    {25th International Meshing Roundtable Research Notes},
   organization = {Sandia National Laboratories}
 }
 
@@ -2331,14 +2331,17 @@ Ref/rokos-phd-london-scale-para-aniso-adapt.pdf
 
 Ref/rokos-gorman-southern-kelly-arxiv-1308.2480v1-thread-para-adapt.pdf
 
-@incollection{Gorman-2015,
-  title={Thread-parallel anisotropic mesh adaptation},
-  author={G. J. Gorman and G. Rokos and J. Southern and P. H. J. Kelly},
+@inbook{Gorman-2015,
+  title={Thread-Parallel Anisotropic Mesh Adaptation},
+  author={G. J. Gorman and G. Rokos and J. Southern and Kelly, P. H. J.},
   booktitle={New Challenges in Grid Generation and Adaptivity
              for Scientific Computing},
+  isbn="978-3-319-06053-8",
+  editor="Perotto, Simona and Formaggia, Luca",
   pages={113--137},
-  year={2015},
-  publisher={Springer}
+  year=2015,
+  publisher={Springer International Publishing},
+  doi={10.1007/978-3-319-06053-8_6}
 }
 @article{DBLP:journals/corr/RokosGSK13,
   author    = {Georgios Rokos and
@@ -5794,16 +5797,17 @@ Ref/alauzet-loseille-cad-2015-decade-aniso-adapt-cfd-preprint.pdf
 Ref/loseille-handbook-2016-ch10-unstruct-mesh-gen-adapt.pdf
 
 @incollection{loseille-handbook,
-title = "Chapter 10 - Unstructured Mesh Generation and Adaptation",
-editor = "R\'emi Abgrall and Chi-Wang Shu",
-booktitle = "Handbook of Numerical Methods for Hyperbolic Problems: Applied and Modern Issues",
-publisher = "Elsevier",
+title = {Unstructured Mesh Generation and Adaptation},
+editor = {R\'emi Abgrall and Chi-Wang Shu},
+booktitle = {Handbook of Numerical Methods for Hyperbolic Problems:
+             Applied and Modern Issues},
+publisher = {Elsevier},
 year = 2017,
 volume = 18,
 pages = {263--302},
-series = "Handbook of Numerical Analysis",
+series = {Handbook of Numerical Analysis},
 issn = {1570-8659},
-doi = {http://dx.doi.org/10.1016/bs.hna.2016.10.004},
+doi = {10.1016/bs.hna.2016.10.004},
 author = {A. Loseille}
 }
 
@@ -8529,12 +8533,14 @@ Ref/lipnikov-ec-2004-adapt-parallel.pdf
 
 @article{lipnikov-ec-2004,
   author    = {Konstantin Lipnikov and Yuri V. Vassilevski},
-  title     = {On control of adaptation in parallel mesh generation},
+  title     = {On Control of Adaptation in Parallel Mesh Generation},
   journal   = {Engineering with Computers},
-  volume    = {20},
-  number    = {3},
+  volume    = 20,
+  number    = 3,
   pages     = {193--201},
-  year      = {2004}
+  month     = sep,
+  year      = 2004,
+  doi       = {10.1007/s00366-004-0287-1}
 }
 
 Ref/agouzal-lipnikov-vassilevski-cmmp-2010-hessian-free-geom-interp.pdf
@@ -12699,30 +12705,35 @@ Ref/chrisochoides-ijnme-2003-parallel-delaunay-kernel.pdf
 
 @article{chrisochoides-nave-parallel-delaunay-kernel,
  author = {Nikos Chrisochoides and Nave, D.},
- title  = {Parallel Delaunay mesh generation kernel},
+ title  = {Parallel Delaunay Mesh Generation Kernel},
  journal= {International Journal for Numerical Methods in Engineering},
  volume = 58,
  number = 2,
  pages  = {161--176},
- month  = Sep,
- year   = 2003
+ month  = sep,
+ year   = 2003,
+ doi    = {10.1002/nme.765}
 }
 @article{foteinos-chrisochoides-parallel-image2mesh,
 author = {Panagiotis Foteinos and Nikos Chrisochoides},
-title = {High Quality Real-Time Image-to-Mesh Conversion for Finite Element Simulations},
+title = {High Quality Real-Time Image-to-Mesh Conversion
+         for Finite Element Simulations},
 journal = {Journal on Parallel and Distributed Computing},
 publisher = {Elsevier},
-Volume = {74},
-No. = {2},
-year = {2014},
-pages = {2123-2140}
+volume = 74,
+number = 2,
+year = 2014,
+pages = {2123--2140},
+doi = {10.1016/j.jpdc.2013.11.002}
 }
 
 @inproceedings{drakopoulos-tsolakis-chrisochoides-CDT3D,
 author = {Fotios Drakopoulos and Christos Tsolakis and Nikos Chrisochoides},
-title = {Fine-grained Speculative Topological Transformation Scheme for Local Reconnection Method},
-year = 2018,
-type   = {AIAA Paper}
+title = {Fine-Grained Speculative Topological Transformation Scheme
+         for Local Reconnection Method},
+ type   = {AIAA AVIATION 2018,},
+ number = {American Institute of Aeronautics and Astronautics},
+ year   = {Reston, VA (submitted for publication)}
 }
 
 Ref/chrisochoides-icngg-2002-parallel-programming-environment.pdf
@@ -12763,30 +12774,37 @@ Ref/rivara-chrisochoides-imr13-2004-parallel-edge-adapt.pdf
 author = {Andrey Chernikov and Nikos Chrisochoides},
 title = {Algorithm 872: Parallel 2D Constrained Delaunay Mesh Generation},
 journal = {ACM Transactions on Mathematical Software},
-Volume = {34},
-No. = {1},
-year = {2008},
-month = {January},
-pages = {6-25}
+Volume = 34,
+No. = 1,
+year = 2008,
+month = jan,
+pages = {6--25},
+doi = {10.1145/1322436.1322442}
 }
 
 @article{linardakis-chrisochoides-2008-parallel-decoupled-delaunay,
 author = {Leonidas Linardakis and Nikos Chrisochoides},
-title = {Graded Delaunay Decoupling Method for Parallel Guaranteed Quality Planar Mesh Generation},
+title = {Graded Delaunay Decoupling Method
+         for Parallel Guaranteed Quality Planar Mesh Generation},
 journal = {SIAM Journal on Scientific Computing},
 publisher = {SIAM},
-Volume = {30},
-No. = {4},
-year = {2008},
-month = {March},
-pages = {1875-1891}
+Volume = 30,
+No. = 4,
+year = 2008,
+month = mar,
+pages = {1875--1891},
+doi = {10.1137/060677276}
 }
 
 @inproceedings{thomadakis-tsolakis-chrisochoides-2018-prema,
-author = {Polykarpos Thomadakis and Christos Tsolakis and Konstantinos Vogiatzis and Andriy Kot and Nikos Chrisochoides},
-title = {Parallel Software Framework for Large-Scale Parallel Mesh Generation and Adaptation for CFD Solvers},
-type = "AIAA paper",
-year = 2018,
+author = {Polykarpos Thomadakis and Christos Tsolakis and
+          Konstantinos Vogiatzis and Andriy Kot and Nikos Chrisochoides},
+title = {Parallel Software Framework
+         for Large-Scale Parallel Mesh Generation and Adaptation
+         for CFD Solvers},
+ type   = {AIAA AVIATION 2018,},
+ number = {American Institute of Aeronautics and Astronautics},
+ year   = {Reston, VA (submitted for publication)}
 }
 
 Ref/pardue-chrisochoides-chernikov-imr24-2015-para-2d-aniso-delaunay.pdf
@@ -12843,7 +12861,7 @@ Ref/chrisochoides-chernikov-feng-tsolakis-imr24-2015-extreme-scale-mesh-gen.pdf
   title =        {Extreme-Scale Parallel Mesh Generation: Telescopic Approach},
   month =        oct,
   year =         2015,
-  series =       {24th International Meshing Roundtable Technical Poster},
+  booktitle =    {24th International Meshing Roundtable Technical Poster},
   organization = {Sandia National Laboratories}
 }
 
@@ -12875,24 +12893,25 @@ Ref/chrisochoides-imr-2009-exascale-para-mesh-gen.pdf
   doi =          {10.1007/978-3-642-04319-2_19}
 }
 
-@InProceedings{chrisochoides-chernikov-kennedy-tsolakis-garner-aiaa-2018-PDR,
+@techreport{chrisochoides-chernikov-kennedy-tsolakis-garner-aiaa-2018-PDR,
 author = {Nikos Chrisochoides and Andrey Chernikov and Thomas Kennedy and Christos Tsolakis and Kevin Garner},
 title = {Parallel Data Refinement Layer of a Telescopic Approach for Extreme-scale Parallel Mesh Generation for CFD Applications},
-type = {AIAA Paper},
-year = 2018,
+ type   = {AIAA AVIATION 2018,},
+ number = {American Institute of Aeronautics and Astronautics},
+ year   = {Reston, VA (submitted for publication)}
 }
 
 @article{chernikov-chrisochoides-PDR-2006,
     journal = {SIAM Journal on Scientific Computing},
     month = nov,
-    volume = {28},
+    volume = 28,
     year = 2006,
     pages = {1907--1926},
-    title = {Parallel guaranteed quality Delaunay uniform mesh refinement},
+    title = {Parallel Guaranteed Quality Delaunay Uniform Mesh Refinement},
     author = {Andrey Chernikov and Nikos Chrisochoides},
     issue = 5,
+    doi = {10.1137/050625886}
 }
-
 
 Ref/antonopoulos-blagojevic-jpdc-2009-multigrain-delaunay-multicore-smt-arch.pdf
 
@@ -14872,7 +14891,6 @@ Ref/carson-masters-thesis-mit-2016-err-est-cg-dg-hdg-fe.pdf
  year   = 2016,
  doi    = {1721.1/105608}
 }
-
 
 Ref/kudo-masters-thesis-mit-2014-metric-opt-adapt.pdf
 
