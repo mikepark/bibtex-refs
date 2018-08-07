@@ -1,33 +1,21 @@
 
 .SUFFIXES :
 
-.SUFFIXES : .tex .dvi .ps .pdf .bib
+.SUFFIXES : .tex .pdf .bib
 
-.PHONEY : default dvi ps pdf clean clobber push pull
+.PHONEY : default pdf clean clobber push pull
 
 REPORTS = all mike_park_publications
 
 default: bib pdf
-
-ps: $(REPORTS:%=%.ps)
 
 pdf: $(REPORTS:%=%.pdf)
 
 bib: $(REPORTS:%=%.bib)
 
 .tex.bib:
-	latex $*
+	pdflatex $*
 	bibtex $*
-
-.tex.dvi:
-	latex $*
-	grep 'There were undefined references' $*.log > /dev/null && \
-	   bibtex $* && latex $* || true
-	grep Rerun $*.log > /dev/null && latex $* || true
-	grep Rerun $*.log > /dev/null && latex $* || true
-
-.dvi.ps:
-	dvips -o $*.ps $*.dvi
 
 .tex.pdf:
 	pdflatex $*
@@ -36,26 +24,25 @@ bib: $(REPORTS:%=%.bib)
 	grep Rerun $*.log > /dev/null && pdflatex $* || true
 	grep Rerun $*.log > /dev/null && pdflatex $* || true
 
-gv: ps
-	( gv -w $(SHOW).ps || gv --watch $(SHOW).ps ) &
-
 clean:
 	rm -rf $(REPORTS:%=%.aux) $(REPORTS:%=%.bbl) $(REPORTS:%=%.blg)
-	rm -rf $(REPORTS:%=%.log) $(REPORTS:%=%.toc) $(REPORTS:%=%.dvi)
+	rm -rf $(REPORTS:%=%.log) $(REPORTS:%=%.toc)
 	rm -rf $(REPORTS:%=%.out)
 	rm -rf *~ 
 
 clobber: clean
-	rm -rf $(REPORTS:%=%.ps) $(REPORTS:%=%.pdf)
+	rm -rf $(REPORTS:%=%.pdf)
+
+REFHOST=acdl
 
 push:
 	git push
 	rm -f Ref/.DS_Store
-	rsync -av --rsh=ssh Ref acdl:/master/home/mikepark
+	rsync -av --rsh=ssh Ref $(REFHOST):/master/home/mikepark
 
 pull:
 	git pull
-	rsync -av --rsh=ssh acdl:/master/home/mikepark/Ref .
+	rsync -av --rsh=ssh $(REFHOST):/master/home/mikepark/Ref .
 
 SUBJECTHOST=cmb20
 
