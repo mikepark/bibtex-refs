@@ -7,7 +7,7 @@
 
 REPORTS = all mike_park_publications
 
-default: bib pdf
+default: pdf
 
 pdf: $(REPORTS:%=%.pdf)
 
