@@ -28,6 +28,7 @@ clean:
 	rm -rf $(REPORTS:%=%.aux) $(REPORTS:%=%.bbl) $(REPORTS:%=%.blg)
 	rm -rf $(REPORTS:%=%.log) $(REPORTS:%=%.toc)
 	rm -rf $(REPORTS:%=%.out)
+	rm -rf $(REPORTS:%=%.dvi)
 	rm -rf *~ 
 
 clobber: clean
