@@ -34,22 +34,4 @@ clean:
 clobber: clean
 	rm -rf $(REPORTS:%=%.pdf)
 
-REFHOST=cmb20
-
-push:
-	git push
-	rm -f Ref/.DS_Store
-	rsync -av --rsh=ssh Ref $(REFHOST):bibtex-refs
-
-pull:
-	git pull
-	rsync -av --rsh=ssh $(REFHOST):bibtex-refs/Ref .
-
-SUBJECTHOST=cmb20
-
-push-subjects:
-	rsync -av --rsh=ssh subjects $(SUBJECTHOST):bibtex-refs
-
-pull-subjects:
-	rsync -av --rsh=ssh $(SUBJECTHOST):bibtex-refs/subjects .
 
